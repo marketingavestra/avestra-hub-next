@@ -80,7 +80,7 @@ export const TOOLS = [
     name: 'Harvey AI', stars: 5, badge: 'Enterprise', badgeType: 'enterprise',
     desc: 'IA treinada exclusivamente para o Direito. Usado por Allen & Overy e grandes bancas. Pesquisa profunda, redação e análise de risco.',
     tags: ['LLM Jurídico', 'Big Law', 'Enterprise'],
-    price: 'Enterprise — sob consulta', url: 'https://www.harvey.ai',
+    price: 'Enterprise · sob consulta', url: 'https://www.harvey.ai',
     category: 'Pesquisa Jurídica', saves: 2200, views: 19100,
     gradient: 'linear-gradient(135deg, #1e40af 0%, #0f172a 100%)', featured: true,
     screenshotUrl: shot('https://www.harvey.ai'),

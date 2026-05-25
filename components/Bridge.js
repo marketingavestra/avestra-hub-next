@@ -5,7 +5,7 @@ const STAGES = [
     num: '01',
     label: 'Hub Central',
     headline: 'Resolve curiosidade',
-    desc: 'Você conhece o que existe. Testa. Filtra. Entende o que funciona de verdade para o seu tipo de trabalho — sem perder horas em ferramenta errada.',
+    desc: 'Você conhece o que existe. Testa. Filtra. Entende o que funciona de verdade para o seu tipo de trabalho. Sem perder horas em ferramenta errada.',
   },
   {
     num: '02',
@@ -23,7 +23,7 @@ const STAGES = [
     num: '04',
     label: 'Mentoria',
     headline: 'Resolve crescimento',
-    desc: 'Você implementa IA com método no escritório inteiro. Não só no seu computador. Escala com estrutura — não com tentativa e erro.',
+    desc: 'Você implementa IA com método no escritório inteiro. Não só no seu computador. Escala com estrutura. Sem tentativa e erro.',
   },
 ]
 
@@ -40,7 +40,7 @@ export default function Bridge() {
           </h2>
           <p className={styles.body}>
             Você entra pelo ponto que faz sentido agora.
-            O sistema leva ao próximo de forma natural — sem salto forçado.
+            O sistema leva ao próximo de forma natural. Sem salto forçado.
           </p>
         </div>
 

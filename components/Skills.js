@@ -70,7 +70,7 @@ export default function Skills() {
       <div className={styles.inner}>
 
         <div className="reveal">
-          <span className="section-label">Skills Sob Medida — R$27</span>
+          <span className="section-label">Skills Sob Medida · R$27</span>
           <h2 className={styles.headline}>
             Seu agente de IA
             <span className={`text-gradient ${styles.headlineLine}`}> personalizado</span>

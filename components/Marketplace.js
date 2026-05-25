@@ -29,7 +29,7 @@ const PLANS = [
   {
     tag: 'Completo',
     name: 'Curso IA\nJurídica',
-    desc: 'Do prompt básico à automação completa do escritório. 12 módulos — 8 horas de conteúdo.',
+    desc: 'Do prompt básico à automação completa do escritório. 12 módulos. 8 horas de conteúdo.',
     price: 'R$297',
     priceSub: 'acesso vitalício',
     items: ['12 módulos práticos', '8h de conteúdo', 'Acesso vitalício', 'Certificado'],

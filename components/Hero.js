@@ -25,7 +25,7 @@ export default function Hero() {
           <p className={`reveal delay-2 ${styles.sub}`}>
             Testamos cada ferramenta. Descartamos o que não funciona.
             <br />
-            O que ficou está aqui — com guia de uso, prompts prontos e preço real.
+            O que ficou está aqui. Guia de uso, prompts prontos e preço real.
           </p>
 
           <div className={`reveal delay-2 ${styles.chips}`}>
