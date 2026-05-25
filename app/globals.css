@@ -173,12 +173,23 @@ img { max-width: 100%; height: auto; display: block; }
   100% { background-position: 0% 50%; }
 }
 
-/* ── Responsividade global ── */
-@media (max-width: 960px) {
+/* ── section-pad mobile-first ── */
+:root {
+  --section-pad: 3rem 1rem; /* mobile base */
+}
+
+@media (min-width: 640px) {
   :root { --section-pad: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 3vw, 1.5rem); }
 }
-@media (max-width: 600px) {
-  :root { --section-pad: 3rem 1.1rem; }
+
+@media (min-width: 960px) {
+  :root { --section-pad: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 2rem); }
+}
+
+/* Botões full-width no mobile */
+.btn-primary,
+.btn-accent {
+  min-height: 48px; /* touch-friendly */
 }
 
 /* ── Marketplace utilities ── */

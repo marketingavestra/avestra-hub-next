@@ -1,3 +1,7 @@
+/* ──────────────────────────────────────────────
+   NAV — Mobile-First
+   ────────────────────────────────────────────── */
+
 .nav {
   position: sticky;
   top: 0;
@@ -17,22 +21,34 @@
 .inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 2rem);
+  padding: 0 1rem;
   height: 62px;
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .inner { padding: 0 1.5rem; gap: 2rem; }
+}
+
+@media (min-width: 960px) {
+  .inner { padding: 0 2rem; gap: 2.5rem; }
 }
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 0.2em;
   color: var(--n1);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .logo { font-size: 1.3rem; }
 }
 
 .logoBadge {
@@ -48,11 +64,16 @@
   margin-top: 2px;
 }
 
+/* Links de nav — ocultos no mobile, visíveis no desktop */
 .links {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 2rem;
   flex: 1;
+}
+
+@media (min-width: 960px) {
+  .links { display: flex; }
 }
 
 .link {
@@ -62,31 +83,48 @@
   text-transform: uppercase;
   color: var(--n3);
   transition: color 0.2s;
+  white-space: nowrap;
+  /* Touch-friendly mesmo no desktop */
+  padding: 0.5rem 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 .link:hover { color: var(--n1); }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 0.5rem;
   margin-left: auto;
 }
 
-/* Search hint (desktop) */
-.searchHint {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.38rem 0.875rem;
-  background: var(--bg3);
-  border: var(--border-subtle);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: border-color 0.2s;
-  max-width: 180px;
+@media (min-width: 640px) {
+  .actions { gap: 0.875rem; }
 }
 
-.searchHint:hover { border-color: rgba(144, 192, 224, 0.22); }
+/* Search hint — só desktop */
+.searchHint {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .searchHint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.38rem 0.875rem;
+    min-height: 44px;
+    background: var(--bg3);
+    border: var(--border-subtle);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    max-width: 180px;
+  }
+
+  .searchHint:hover { border-color: rgba(144, 192, 224, 0.22); }
+}
 
 .searchHintIcon { font-size: 0.75rem; opacity: 0.6; }
 
@@ -98,36 +136,46 @@
   text-overflow: ellipsis;
 }
 
-@media (max-width: 960px) {
-  .searchHint { display: none; }
-}
-
 .cta {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
   background: var(--accent);
-  padding: 0.5rem 1.1rem;
+  padding: 0.5rem 0.875rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 3px;
   transition: background 0.2s, transform 0.15s;
   white-space: nowrap;
 }
+
+@media (min-width: 640px) {
+  .cta { padding: 0.5rem 1.1rem; font-size: 0.68rem; }
+}
+
 .cta:hover {
   background: var(--accent-dark);
   transform: translateY(-1px);
 }
 
+/* Hamburger — visível só no mobile/tablet */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
-  padding: 4px;
+  /* Touch */
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
+
+.hamburger:hover { background: var(--bg3); }
 
 .hamburger span {
   display: block;
@@ -143,6 +191,11 @@
 .hamburgerOpen span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburgerOpen span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+@media (min-width: 960px) {
+  .hamburger { display: none; }
+}
+
+/* Drawer mobile */
 .drawer {
   display: flex;
   flex-direction: column;
@@ -152,32 +205,31 @@
 }
 
 .drawerLink {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--n2);
-  padding: 0.875rem clamp(1.25rem, 4vw, 2rem);
+  padding: 0 1rem;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
   transition: color 0.2s;
 }
 .drawerLink:hover { color: var(--n1); }
 
 .drawerCta {
-  margin: 0.75rem clamp(1.25rem, 4vw, 2rem) 0;
-  display: inline-flex;
+  margin: 0.75rem 1rem 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  min-height: 52px;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #000;
   background: var(--accent);
-  padding: 0.75rem 1.5rem;
+  padding: 0 1.5rem;
   border-radius: 3px;
-}
-
-@media (max-width: 960px) {
-  .links { display: none; }
-  .hamburger { display: flex; }
 }

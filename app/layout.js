@@ -30,6 +30,13 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#04080F',
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${bebasNeue.variable}`}>
