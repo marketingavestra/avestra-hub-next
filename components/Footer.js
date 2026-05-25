@@ -8,9 +8,9 @@ export default function Footer() {
         <div className={styles.brand}>
           <p className={styles.logo}>AVESTRA</p>
           <p className={styles.tagline}>
-            Ferramentas de IA para o mercado jurídico brasileiro.
+            IA jurídica que funciona de verdade.
             <br />
-            Curadoria por Dr. Wladmir Bonadio &middot; OAB/SP 398.640
+            Curadoria e implementação por Dr. Wladmir Bonadio · OAB/SP 398.640
           </p>
         </div>
 
@@ -18,13 +18,13 @@ export default function Footer() {
           <p className={styles.navTitle}>Navegação</p>
           <a href="#diretorio">Diretório de IAs</a>
           <a href="#skills">Skills Sob Medida</a>
-          <a href="#ofertas">Marketplace</a>
+          <a href="#ofertas">Copiloto Jurídico</a>
           <a
             href="https://wa.me/5511965817604"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Fale Conosco
+            Fale com a Equipe
           </a>
         </nav>
 

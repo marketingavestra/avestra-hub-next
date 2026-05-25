@@ -5,21 +5,21 @@ export default function FinalCTA() {
     <section className={styles.section}>
       <div className={styles.inner}>
 
-        <p className={styles.opening}>Uma última coisa</p>
+        <p className={styles.opening}>Antes de fechar essa aba</p>
 
         <div className={`reveal ${styles.body}`}>
-          <p>Você viu o que é possível.</p>
+          <p>Você acabou de ver o que existe no mercado.</p>
           <p>
-            30+ ferramentas. Skills prontas. Agentes personalizados. Curso completo.
+            30+ ferramentas. Prompts prontos. Agentes configurados. Tudo testado por quem usa no dia a dia.
           </p>
           <p>
-            Fazer manualmente o que a IA faz em segundos está ficando insustentável.
-            Você sabe disso.
+            Fazer manualmente o que a IA resolve em segundos vai ficando cada vez mais difícil de justificar.
+            Você sabe disso. Só ainda não começou.
           </p>
           <p className={styles.emphasis}>
-            A decisão já foi tomada.
+            Começar é a parte mais fácil.
             <br />
-            Falta só executar.
+            O resto a gente resolve com você.
           </p>
         </div>
 
@@ -29,32 +29,32 @@ export default function FinalCTA() {
           <div className={styles.path}>
             <span className={styles.pathNum}>01</span>
             <p>
-              <strong>Continuar tentando sozinho</strong>, sem resultado real.
+              <strong>Continuar no improviso</strong>, cada processo do zero, sem ferramenta e sem processo.
             </p>
           </div>
           <div className={styles.path}>
             <span className={styles.pathNum}>02</span>
             <p>
-              <strong>Ter um agente treinado para você</strong>, pronto em 48h, por R$27.
+              <strong>Ativar o Copiloto Jurídico</strong> por R$27 e ter 6 agentes trabalhando com você a partir de hoje.
             </p>
           </div>
         </div>
 
         <p className={`reveal delay-2 ${styles.pathConclusion}`}>
-          Só um desses resolve de verdade.
+          Só um desses resolve o problema.
         </p>
 
         <div className={`reveal delay-3 ${styles.ctaGroup}`}>
           <a
-            href="https://wa.me/5511965817604?text=Quero%20come%C3%A7ar%20com%20a%20Avestra"
+            href="https://wa.me/5511965817604?text=Quero%20ativar%20o%20Copiloto%20Jur%C3%ADdico"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn-accent ${styles.ctaBtn}`}
           >
-            Quero Começar Agora
+            Ativar o Copiloto por R$27
           </a>
           <p className={styles.ctaNote}>
-            Pagamento seguro &middot; Entrega em 48h &middot; Garantia total
+            Acesso imediato · Sem contrato · Cancela quando quiser
           </p>
         </div>
 

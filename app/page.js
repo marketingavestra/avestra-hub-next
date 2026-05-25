@@ -1,3 +1,6 @@
+// Força SSR pra não explodir memória no build estático (tools.js é grande)
+export const dynamic = 'force-dynamic'
+
 import Nav from '@/components/Nav'
 import Marquee from '@/components/Marquee'
 import Hero from '@/components/Hero'

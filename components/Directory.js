@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import styles from './Directory.module.css'
 import ToolDetail from './ToolDetail'
-import { TOOLS } from '@/data/tools'
+import { TOOLS } from '@/data/tools-card'
 import { trackViewContent, trackSearch, trackSaveTool, trackLead } from '@/lib/metaEvents'
 
 /* ─── Categorias + opções ─── */
@@ -45,6 +45,7 @@ function Stars({ count }) {
 /* ─── ToolCard ─── */
 function ToolCard({ tool, onSave, saved, onOpen }) {
   const [imgError, setImgError] = useState(false)
+  const [shotError, setShotError] = useState(false)
 
   return (
     <div
@@ -57,6 +58,16 @@ function ToolCard({ tool, onSave, saved, onOpen }) {
     >
       {/* Thumbnail */}
       <div className={styles.cardThumb} style={{ background: tool.gradient }}>
+        {tool.screenshotUrl && !shotError && (
+          <img
+            src={tool.screenshotUrl}
+            alt={`${tool.name} preview`}
+            className={styles.cardScreenshot}
+            loading="lazy"
+            onError={() => setShotError(true)}
+          />
+        )}
+        <div className={styles.cardThumbOverlay} />
         {tool.featured && <span className={styles.featuredBadge}>★ Destaque</span>}
         <span className={`${styles.badgePill} ${styles[`badge--${tool.badgeType}`]}`}>
           {tool.badge}
@@ -182,10 +193,18 @@ export default function Directory() {
     return () => clearTimeout(searchTimer.current)
   }, [query, filtered.length])
 
-  /* Abre drawer + rastreia ViewContent */
-  const openTool = (tool) => {
-    setSelectedTool(tool)
+  /* Abre drawer + carrega dados ricos (lazy import) + rastreia ViewContent */
+  const openTool = async (tool) => {
     trackViewContent(tool.name, tool.category)
+    // Já abre o drawer com os dados básicos enquanto carrega os detalhes
+    setSelectedTool(tool)
+    try {
+      const { TOOLS_DETAIL } = await import('@/data/tools-detail')
+      const detail = TOOLS_DETAIL[tool.name] || {}
+      setSelectedTool((prev) => prev?.name === tool.name ? { ...prev, ...detail } : prev)
+    } catch (e) {
+      // se falhar, o drawer continua funcionando com os dados básicos
+    }
   }
 
   /* Salvar/remover + rastreia SaveTool */
@@ -235,11 +254,11 @@ export default function Directory() {
         <div className={`reveal ${styles.heading}`}>
           <span className="section-label">Diretório</span>
           <h2 className={styles.headline}>
-            Encontre a IA certa
-            <span className="text-gradient"> para o seu escritório</span>
+            A IA certa pra
+            <span className="text-gradient"> cada etapa do seu trabalho</span>
           </h2>
           <p className={styles.sub}>
-            {TOOLS.length}+ ferramentas com guias de uso, dicas e prompts prontos. Clique em qualquer card para explorar.
+            São {TOOLS.length}+ ferramentas testadas. Cada card tem guia de uso, dicas e prompts pra copiar e usar agora.
           </p>
         </div>
 
@@ -312,8 +331,8 @@ export default function Directory() {
 
             {/* CTA sidebar */}
             <div className={styles.sidebarCta}>
-              <p className={styles.sidebarCtaTitle}>Quer uma skill sob medida?</p>
-              <p className={styles.sidebarCtaDesc}>A Avestra configura agentes de IA para sua rotina em 48h.</p>
+              <p className={styles.sidebarCtaTitle}>Precisa de algo feito pra você?</p>
+              <p className={styles.sidebarCtaDesc}>A Avestra configura seus agentes em 48h. Você usa, eles trabalham.</p>
               <a
                 href="https://wa.me/5511965817604?text=Quero%20uma%20skill%20sob%20medida"
                 target="_blank" rel="noopener noreferrer"
@@ -363,14 +382,14 @@ export default function Directory() {
 
             <div className={`reveal delay-2 ${styles.footerCta}`}>
               <p className={styles.footerCtaNote}>
-                Mais de 21 ferramentas adicionais no diretório completo
+                Tem mais de 21 ferramentas esperando no diretório completo. Curadoria nova toda semana.
               </p>
               <a
                 href="https://wa.me/5511965817604?text=Quero%20acesso%20ao%20diret%C3%B3rio%20completo"
                 className="btn-accent" target="_blank" rel="noopener noreferrer"
                 onClick={() => handleCtaClick('Ver Diretório Completo', 'https://wa.me/5511965817604')}
               >
-                Ver Diretório Completo ↗
+                Quero o Diretório Completo ↗
               </a>
             </div>
           </div>

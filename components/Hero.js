@@ -13,19 +13,19 @@ export default function Hero() {
         <div className={styles.content}>
           <div className={`reveal ${styles.badge}`}>
             <span className={styles.dot} />
-            Gratuito &mdash; Sem Cadastro &mdash; Sem Cartão
+            Gratuito · Sem Cadastro · Sem Cartão
           </div>
 
           <h1 className={`reveal delay-1 ${styles.headline}`}>
-            30+ FERRAMENTAS<br />
-            <span className={`text-gradient ${styles.headlineLine}`}>DE IA JURÍDICA</span><br />
-            NUM SÓ LUGAR
+            A IA certa<br />
+            <span className={`text-gradient ${styles.headlineLine}`}>já existe.</span><br />
+            Você só precisa encontrar.
           </h1>
 
           <p className={`reveal delay-2 ${styles.sub}`}>
-            Testamos. Selecionamos. Organizamos.
+            Testamos cada ferramenta. Descartamos o que não funciona.
             <br />
-            O que realmente funciona para advogados, em um diretório gratuito e atualizado.
+            O que ficou está aqui — com guia de uso, prompts prontos e preço real.
           </p>
 
           <div className={`reveal delay-2 ${styles.chips}`}>
@@ -36,10 +36,10 @@ export default function Hero() {
 
           <div className={`reveal delay-3 ${styles.ctaGroup}`}>
             <a href="#diretorio" className={`btn-accent ${styles.ctaBtn}`}>
-              Explorar Gratuitamente
+              Ver as Ferramentas
             </a>
             <p className={styles.ctaNote}>
-              Sem cadastro · Acesso instantâneo · 100% gratuito
+              Sem cadastro · Acesso agora · 100% gratuito
             </p>
           </div>
         </div>
