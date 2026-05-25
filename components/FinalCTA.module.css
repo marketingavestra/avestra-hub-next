@@ -81,7 +81,17 @@
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--b5);
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.preCtaLine {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: var(--n2);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 2.25rem;
+  font-style: italic;
 }
 
 .ctaGroup {

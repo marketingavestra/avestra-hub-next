@@ -35,7 +35,7 @@ export default function FinalCTA() {
           <div className={styles.path}>
             <span className={styles.pathNum}>02</span>
             <p>
-              <strong>Ativar o Copiloto Jurídico</strong> por R$27 e ter 6 agentes trabalhando com você a partir de hoje.
+              <strong>Ativar minha primeira Skill Jurídica</strong> por R$27 e começar a automatizar tarefas reais do escritório ainda hoje.
             </p>
           </div>
         </div>
@@ -44,17 +44,21 @@ export default function FinalCTA() {
           Só um desses resolve o problema.
         </p>
 
+        <p className={`reveal delay-2 ${styles.preCtaLine}`}>
+          Fazer petição, revisar contrato e pesquisar jurisprudência do mesmo jeito de 3 anos atrás está ficando cada vez mais caro.
+        </p>
+
         <div className={`reveal delay-3 ${styles.ctaGroup}`}>
           <a
-            href="https://wa.me/5511965817604?text=Quero%20ativar%20o%20Copiloto%20Jur%C3%ADdico"
+            href="https://wa.me/5511965817604?text=Quero%20minha%20Skill%20Jur%C3%ADdica"
             target="_blank"
             rel="noopener noreferrer"
             className={`btn-accent ${styles.ctaBtn}`}
           >
-            Ativar o Copiloto por R$27
+            Quero minha Skill Jurídica por R$27
           </a>
           <p className={styles.ctaNote}>
-            Acesso imediato · Sem contrato · Cancela quando quiser
+            Entrega em 48h · Sem mensalidade · Garantia total
           </p>
         </div>
 

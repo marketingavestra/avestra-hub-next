@@ -60,7 +60,7 @@ const SKILL_CARDS = [
 const BENEFITS = [
   { title: 'Entrega em 48 horas', sub: 'Sem esperar semanas.' },
   { title: 'Sem mensalidade', sub: 'Pague uma vez, use para sempre.' },
-  { title: 'Feito para você', sub: 'Treinado para a sua rotina específica.' },
+  { title: 'Feito para você', sub: 'Treinado para a rotina jurídica do seu escritório.' },
   { title: '30 dias de suporte', sub: 'Ajustes e calibragem incluídos.' },
 ]
 
@@ -72,13 +72,12 @@ export default function Skills() {
         <div className="reveal">
           <span className="section-label">Skills Sob Medida · R$27</span>
           <h2 className={styles.headline}>
-            Seu agente de IA
-            <span className={`text-gradient ${styles.headlineLine}`}> personalizado</span>
-            <br />
-            para seu escritório
+            Agentes jurídicos criados
+            <span className={`text-gradient ${styles.headlineLine}`}> para tarefas reais do escritório</span>
           </h2>
           <p className={styles.sub}>
-            Diga o que precisa. Em 48h entregamos um agente treinado que faz o trabalho por você.
+            Descreva uma tarefa repetitiva do seu escritório.
+            Nós entregamos um agente treinado para executar isso por você em até 48h.
             Sem mensalidade. Sem configuração.
           </p>
         </div>

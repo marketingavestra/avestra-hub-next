@@ -98,6 +98,39 @@
   .sub { max-width: 440px; margin-bottom: 2rem; }
 }
 
+/* Bloco de subtítulo + checklist */
+.subBlock {
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  color: var(--n2);
+  line-height: 1.5;
+}
+
+.checkMark {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
 .chips {
   display: flex;
   flex-wrap: wrap;

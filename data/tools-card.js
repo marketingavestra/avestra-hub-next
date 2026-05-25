@@ -112,39 +112,6 @@ export const TOOLS = [
      REDAÇÃO DE PEÇAS
      ══════════════════════════════════════ */
   {
-    abbr: 'AVS', logoUrl: '', logoBg: '#f59e0b',
-    name: 'Copiloto Jurídico', stars: 5, badge: 'Novo', badgeType: 'new',
-    desc: 'Agente especializado da Avestra. Redige petições iniciais, recursos e pareceres com base no histórico do processo.',
-    tags: ['Petições', 'Recursos', 'Case Memory'],
-    price: 'R$ 27/mês', url: '#ofertas',
-    category: 'Redação de Peças', saves: 4100, views: 31000,
-    gradient: 'linear-gradient(135deg, #f59e0b 0%, #92400e 100%)', featured: true,
-    screenshotUrl: null,
-  },
-
-  {
-    abbr: 'AVA', logoUrl: '', logoBg: '#d97706',
-    name: 'Copiloto Jurídico Anual', stars: 5, badge: 'Novo', badgeType: 'new',
-    desc: 'Produção sem teto. Tokens ilimitados, suporte prioritário e acesso antecipado a cada novo agente. Pra quem usa o Copiloto todo dia.',
-    tags: ['Sem Limite', 'Tokens Ilimitados', 'Prioridade'],
-    price: 'R$ 1.997 (único)', url: 'https://wa.me/5511965817604?text=Quero%20o%20Copiloto%20Anual',
-    category: 'Redação de Peças', saves: 3100, views: 22800,
-    gradient: 'linear-gradient(135deg, #d97706 0%, #78350f 100%)', featured: true,
-    screenshotUrl: null,
-  },
-
-  {
-    abbr: 'MNT', logoUrl: '', logoBg: '#0f172a',
-    name: 'Mentoria com Dr. Wladmir', stars: 5, badge: 'Enterprise', badgeType: 'enterprise',
-    desc: 'Implementação do Copiloto no seu escritório. Mapeamos seus processos, configuramos seus agentes e ficamos 30 dias ao lado da sua equipe.',
-    tags: ['Alta Performance', 'Implementação', '1:1'],
-    price: 'R$ 5.000', url: 'https://wa.me/5511965817604?text=Quero%20saber%20sobre%20a%20Mentoria',
-    category: 'Gestão de Escritório', saves: 1200, views: 9400,
-    gradient: 'linear-gradient(135deg, #1e40af 0%, #0f172a 100%)', featured: true,
-    screenshotUrl: null,
-  },
-
-  {
     abbr: 'SPB', logoUrl: logo('spellbook.legal'), logoBg: '#fff',
     name: 'Spellbook', stars: 4, badge: 'Pago', badgeType: 'paid',
     desc: 'IA para redação de contratos direto no Word. Sugere cláusulas, detecta riscos e compara com padrões de mercado.',

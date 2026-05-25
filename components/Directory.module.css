@@ -100,10 +100,19 @@
   color: var(--n2);
   line-height: 1.65;
   max-width: 520px;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {
   .sub { font-size: 1rem; }
+}
+
+.subSmall {
+  font-size: 0.82rem;
+  color: var(--n3);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: 0.25rem;
 }
 
 /* ── Search ── */

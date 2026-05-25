@@ -254,11 +254,17 @@ export default function Directory() {
         <div className={`reveal ${styles.heading}`}>
           <span className="section-label">Diretório</span>
           <h2 className={styles.headline}>
-            A IA certa pra
-            <span className="text-gradient"> cada etapa do seu trabalho</span>
+            As IAs que realmente
+            <span className="text-gradient"> ajudam advogados no dia a dia</span>
           </h2>
           <p className={styles.sub}>
-            São {TOOLS.length}+ ferramentas testadas. Cada card tem guia de uso, dicas e prompts pra copiar e usar agora.
+            Você não precisa testar dezenas de ferramentas para descobrir quais funcionam.
+            Nós já fizemos isso.
+          </p>
+          <p className={styles.subSmall}>
+            Testamos dezenas de ferramentas jurídicas e deixamos apenas as que realmente ajudam
+            em produtividade, pesquisa, contratos, automação e operação do escritório.
+            Cada ferramenta já vem com aplicação prática, prompts e contexto de uso.
           </p>
         </div>
 
@@ -331,8 +337,8 @@ export default function Directory() {
 
             {/* CTA sidebar */}
             <div className={styles.sidebarCta}>
-              <p className={styles.sidebarCtaTitle}>Precisa de algo feito pra você?</p>
-              <p className={styles.sidebarCtaDesc}>A Avestra configura seus agentes em 48h. Você usa, eles trabalham.</p>
+              <p className={styles.sidebarCtaTitle}>Seu escritório não precisa de mais ferramentas.</p>
+              <p className={styles.sidebarCtaDesc}>Precisa de menos trabalho manual. A Avestra cria agentes jurídicos sob medida para tarefas específicas do seu escritório. Você descreve a demanda. Nós entregamos em 48 horas.</p>
               <a
                 href="https://wa.me/5511965817604?text=Quero%20uma%20skill%20sob%20medida"
                 target="_blank" rel="noopener noreferrer"

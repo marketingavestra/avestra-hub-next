@@ -2,40 +2,40 @@ import styles from './Marketplace.module.css'
 
 const PLANS = [
   {
-    tag: 'Mais popular',
-    name: 'Skill\nSob Medida',
-    desc: 'Agente de IA personalizado para a sua rotina. Feito à mão pela nossa equipe. Entrega em 48h.',
+    tag: 'Começa aqui',
+    name: 'Copiloto\nJurídico',
+    desc: '6 agentes de IA em cadeia. Pesquisa, redação, contratos, prazos e honorários num ambiente só.',
     price: 'R$27',
-    priceSub: 'por skill / único',
-    items: ['Agente personalizado', 'Entrega em 48h', '30 dias de suporte', 'Sem mensalidade'],
-    ctaLabel: 'Quero minha Skill',
+    priceSub: 'por mês',
+    items: ['6 agentes especializados', 'Case Memory por processo', 'Suporte por WhatsApp', 'Acesso imediato'],
+    ctaLabel: 'Ativar o Copiloto',
     ctaStyle: 'primary',
-    waMsg: 'Quero%20uma%20Skill%20Sob%20Medida',
+    waMsg: 'Quero%20ativar%20o%20Copiloto%20Jur%C3%ADdico',
     highlight: false,
   },
   {
     tag: 'Melhor custo',
-    badge: 'Economize R$14',
-    name: 'Pack\n3 Skills',
-    desc: 'Três agentes sob medida para diferentes áreas do seu escritório.',
-    price: 'R$67',
-    priceSub: 'R$22 cada',
-    items: ['3 agentes personalizados', 'Entrega em 48h cada', '30 dias de suporte', 'Economize R$14'],
-    ctaLabel: 'Quero o Pack',
+    badge: 'Mais popular',
+    name: 'Copiloto\nAnual',
+    desc: 'Tokens ilimitados, suporte prioritário e acesso antecipado a cada novo agente. Pra quem usa todo dia.',
+    price: 'R$1.997',
+    priceSub: 'pagamento único',
+    items: ['Tudo do mensal', 'Tokens ilimitados', 'Suporte prioritário em 4h', 'Novos agentes em primeira mão'],
+    ctaLabel: 'Quero o Anual',
     ctaStyle: 'accent',
-    waMsg: 'Quero%20o%20Pack%203%20Skills',
+    waMsg: 'Quero%20o%20Copiloto%20Anual',
     highlight: true,
   },
   {
-    tag: 'Completo',
-    name: 'Curso IA\nJurídica',
-    desc: 'Do prompt básico à automação completa do escritório. 12 módulos. 8 horas de conteúdo.',
-    price: 'R$297',
-    priceSub: 'acesso vitalício',
-    items: ['12 módulos práticos', '8h de conteúdo', 'Acesso vitalício', 'Certificado'],
-    ctaLabel: 'Quero o Curso',
+    tag: 'Implementação',
+    name: 'Mentoria\nDr. Wladmir',
+    desc: 'Configuramos o Copiloto para o seu escritório. Mapeamos seus fluxos e ficamos 30 dias ao seu lado.',
+    price: 'R$5.000',
+    priceSub: 'vagas limitadas',
+    items: ['Diagnóstico de fluxo', 'Configuração dos 6 agentes', '30 dias de acompanhamento', 'Acesso direto ao Dr. Wladmir'],
+    ctaLabel: 'Quero a Mentoria',
     ctaStyle: 'primary',
-    waMsg: 'Quero%20o%20Curso%20IA%20Jur%C3%ADdica',
+    waMsg: 'Quero%20saber%20sobre%20a%20Mentoria',
     highlight: false,
   },
 ]
@@ -64,13 +64,13 @@ export default function Marketplace() {
       <div className={styles.inner}>
 
         <div className="reveal">
-          <span className="section-label">Marketplace Jurídico</span>
+          <span className="section-label">Copiloto Jurídico</span>
           <h2 className={styles.headline}>
             Tudo que você precisa
-            <span className={`text-gradient ${styles.headlineLine}`}> para dominar IA</span>
+            <span className={`text-gradient ${styles.headlineLine}`}> para modernizar a operação do escritório</span>
           </h2>
           <p className={styles.sub}>
-            Skills, agentes e curso. Começa com o que faz mais sentido para a sua rotina.
+            Começa com o plano que faz sentido agora. Cresce quando precisar.
           </p>
         </div>
 
@@ -134,8 +134,8 @@ export default function Marketplace() {
               <p className={styles.guaranteeTitle}>Garantia Risco Zero</p>
               <p className={styles.guaranteeText}>
                 O risco é todo nosso. Não seu.
-                Se não ficar satisfeito, <strong>refazemos gratuitamente</strong>. Você tem 30 dias de suporte
-                para ajustes. Se mesmo assim não servir, devolvemos seu dinheiro. Sem perguntas.
+                Se nos primeiros 30 dias o Copiloto não funcionar para o seu escritório,
+                devolvemos seu dinheiro. Sem perguntas.
               </p>
             </div>
           </div>
