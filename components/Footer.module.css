@@ -1,0 +1,133 @@
+.footer {
+  background: var(--bg);
+  border-top: 1px solid rgba(144, 192, 224, 0.07);
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem clamp(1.25rem, 4vw, 2rem) 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* ── Brand ── */
+.brand {}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.2em;
+  color: var(--n1);
+  margin-bottom: 0.875rem;
+}
+
+.tagline {
+  font-size: 0.78rem;
+  line-height: 1.75;
+  color: var(--n3);
+  max-width: 280px;
+}
+
+/* ── Navigation ── */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.navTitle {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--n3);
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.nav a {
+  font-size: 0.8rem;
+  color: rgba(144, 192, 224, 0.45);
+  transition: color 0.2s;
+}
+
+.nav a:hover { color: var(--b5); }
+
+/* ── Contact ── */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contactLine {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--n3);
+  opacity: 0.6;
+}
+
+.contactLink {
+  font-size: 0.8rem;
+  color: rgba(144, 192, 224, 0.45);
+  transition: color 0.2s;
+}
+
+.contactLink:hover { color: var(--b5); }
+
+/* ── Bottom ── */
+.bottom {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1.25rem clamp(1.25rem, 4vw, 2rem) 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(144, 192, 224, 0.05);
+}
+
+.copy {
+  font-size: 0.68rem;
+  color: var(--n4);
+}
+
+.update {
+  font-size: 0.65rem;
+  color: var(--n4);
+  opacity: 0.7;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .tagline {
+    max-width: 100%;
+  }
+}

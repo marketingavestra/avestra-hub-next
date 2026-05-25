@@ -1,0 +1,37 @@
+.wrapper {
+  overflow: hidden;
+  background: var(--bg3);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(144, 192, 224, 0.07);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--n3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sep {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: rgba(144, 192, 224, 0.18);
+  margin-left: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+}

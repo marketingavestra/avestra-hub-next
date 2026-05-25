@@ -1,0 +1,213 @@
+/* ─────────────────────────────────────────────
+   DESIGN SYSTEM — PULSE BLUE
+   Cliente: Dr. Wladmir Bonadio / Avestra
+   ───────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette */
+  --bg:     #04080F;
+  --bg2:    #080D18;
+  --bg3:    #0C1422;
+  --bg4:    #101828;
+
+  --b1:     #204080;
+  --b2:     #2a52a0;
+  --b3:     #3464c0;
+  --b5:     #90C0E0;
+  --b5-low: rgba(144, 192, 224, 0.10);
+  --b5-mid: rgba(144, 192, 224, 0.20);
+  --b5-high: rgba(144, 192, 224, 0.35);
+
+  --n1:     #E0E0D0;
+  --n2:     #A8A89A;
+  --n3:     #5C6058;
+  --n4:     #252820;
+
+  --accent:      #f59e0b;
+  --accent-dark: #d97706;
+  --accent-low:  rgba(245, 158, 11, 0.12);
+  --accent-mid:  rgba(245, 158, 11, 0.28);
+
+  --success: #22c55e;
+
+  --font-display: var(--font-bebas), 'Arial Black', Impact, sans-serif;
+  --font-body:    var(--font-inter), system-ui, -apple-system, sans-serif;
+
+  --section-pad: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 2rem);
+  --max-w:    1100px;
+  --max-w-sm: 720px;
+
+  --glow-blue:  0 0 60px rgba(32, 64, 128, 0.30), 0 0 120px rgba(32, 64, 128, 0.12);
+  --glow-amber: 0 0 40px rgba(245, 158, 11, 0.22);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --border-subtle: 1px solid rgba(144, 192, 224, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--n1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── Divisor ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(144, 192, 224, 0.12), transparent);
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.10s; }
+.delay-2 { transition-delay: 0.20s; }
+.delay-3 { transition-delay: 0.32s; }
+
+/* ── Botão primário ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--b1);
+  color: var(--n1);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: var(--b2);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+}
+
+/* ── Botão accent ── */
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.btn-accent:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-amber);
+}
+
+/* ── Eyebrow / Section Label ── */
+.section-label {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--b5);
+  margin-bottom: 1rem;
+}
+
+/* ── Gradiente de texto ── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--b5) 0%, var(--b3) 50%, var(--b5) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* ── Stars ── */
+.stars { display: flex; gap: 2px; }
+.star-filled { color: var(--accent); font-size: 10px; }
+.star-empty  { color: var(--n4);     font-size: 10px; }
+
+/* ── Animações ── */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Responsividade global ── */
+@media (max-width: 960px) {
+  :root { --section-pad: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 3vw, 1.5rem); }
+}
+@media (max-width: 600px) {
+  :root { --section-pad: 3rem 1.1rem; }
+}
+
+/* ── Marketplace utilities ── */
+.marketplace-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.badge-free       { background: rgba(22,163,74,0.10); color: #4ade80; border-color: rgba(22,163,74,0.20); }
+.badge-paid       { background: rgba(245,158,11,0.10); color: var(--accent); border-color: rgba(245,158,11,0.20); }
+.badge-enterprise { background: var(--b5-low); color: var(--b5); border-color: rgba(144,192,224,0.18); }
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: rgba(12, 20, 34, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: var(--border-subtle);
+  border-radius: 14px;
+}
+
+/* Scrollbar personalizada (WebKit) */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--n4); }

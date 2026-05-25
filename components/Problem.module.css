@@ -1,0 +1,97 @@
+.section {
+  padding: var(--section-pad);
+  background: var(--bg2);
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── Coluna esquerda ── */
+.left {}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.75rem);
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+  color: var(--n1);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.headlineLine {
+  display: inline;
+}
+
+/* ── Coluna direita ── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 0.25rem;
+}
+
+.point {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(144, 192, 224, 0.07);
+}
+
+.point:first-child {
+  padding-top: 0;
+}
+
+.pointNum {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--b5);
+  opacity: 0.4;
+  padding-top: 2px;
+}
+
+.pointText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--n2);
+}
+
+.pointText strong {
+  color: var(--n1);
+  font-weight: 700;
+}
+
+.conclusion {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--b5);
+  margin-top: 1.75rem;
+  padding-top: 0;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .headline {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .headline {
+    font-size: clamp(1.7rem, 9vw, 2.5rem);
+  }
+}

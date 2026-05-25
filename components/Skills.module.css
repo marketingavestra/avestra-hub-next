@@ -1,0 +1,243 @@
+.section {
+  padding: var(--section-pad);
+  background: var(--bg2);
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--n1);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.headlineLine { display: inline; }
+
+.sub {
+  font-size: 0.92rem;
+  line-height: 1.78;
+  color: var(--n2);
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+
+/* ── Steps ── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(144, 192, 224, 0.07);
+  border: 1px solid rgba(144, 192, 224, 0.07);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.step {
+  padding: 2rem 1.75rem;
+  background: var(--bg3);
+  transition: background 0.2s;
+}
+
+.step:hover {
+  background: rgba(12, 20, 34, 0.8);
+}
+
+.stepNum {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--b5);
+  opacity: 0.25;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.stepTitle {
+  color: var(--n1);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.stepDesc {
+  font-size: 0.77rem;
+  line-height: 1.7;
+  color: var(--n3);
+}
+
+/* ── Skill cards grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--bg3);
+  border: 1px solid rgba(144, 192, 224, 0.07);
+  border-radius: 6px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(144, 192, 224, 0.18);
+  transform: translateY(-2px);
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--accent-low);
+  border: 1px solid var(--accent-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.cardAbbr {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.cardName {
+  color: var(--n1);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  font-size: 0.77rem;
+  line-height: 1.7;
+  color: var(--n3);
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cardPrice {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--b5);
+  letter-spacing: 0.02em;
+}
+
+.cardBtn {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.875rem;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #000;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cardBtn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Benefits ── */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(144, 192, 224, 0.07);
+  border: 1px solid rgba(144, 192, 224, 0.07);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem 1.25rem;
+  background: var(--bg3);
+}
+
+.benefitCheck {
+  color: var(--b5);
+  font-size: 0.9rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.benefitTitle {
+  color: var(--n1);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.benefitSub {
+  font-size: 0.72rem;
+  color: var(--n3);
+}
+
+/* ── CTA ── */
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.ctaBtn {
+  max-width: 380px;
+  width: 100%;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 1rem 2rem;
+}
+
+.ctaNote {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--n3);
+}
+
+/* ── Responsividade ── */
+@media (max-width: 960px) {
+  .steps { grid-template-columns: 1fr; gap: 1px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits { grid-template-columns: repeat(2, 1fr); }
+  .headline { font-size: clamp(1.8rem, 6vw, 3rem); }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .benefits { grid-template-columns: 1fr; }
+  .headline { font-size: clamp(1.7rem, 9vw, 2.6rem); }
+}
